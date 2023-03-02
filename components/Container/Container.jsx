@@ -72,6 +72,42 @@ export default function Container({
                         </div>
                     </div>
                 </div>
+            ):id==3?
+            (
+                <div className={dark? styles.ContainerDark:styles.ContainerDefault}>
+                    <div className='container'>
+                        <div className="row">
+                            <div className="col-12">
+                                <div>
+                                    <h4>{title? title:'Título do container'}</h4>
+                                    {
+                                        star? <div className={styles.Label__Star}>
+                                            <Image src={StarIcon} />
+                                            &nbsp;
+                                            <Image src={StarIcon} />
+                                            &nbsp;
+                                            <Image src={StarIcon} />
+                                            &nbsp;
+                                            <Image src={StarIcon} />
+                                            &nbsp;
+                                            <Image src={StarIcon} />
+                                        </div>:null
+                                    }
+                                    <p>
+                                        {
+                                            content? content:'Conteúdo do container'
+                                        }
+                                    </p>
+                                </div>
+                                <div className={styles.Container_cards}>
+                                    {
+                                        children
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             ):null
     )
 }

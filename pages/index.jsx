@@ -79,7 +79,7 @@ import whatsAppIcon from '../public/icons/whatsapp-blue-icon.png'
 
 import formPhoto from '../public/images/form-photo.webp'
 
-import oftalmoKids from '../public/logo/logo-oftalmokids.svg'
+import oftalmoKids from '../public/logo/logo-oftalmokids.png'
 
 import {Swiper,SwiperSlide} from 'swiper/react';
 import {Navigation,Pagination,Scrollbar,A11y} from 'swiper';
@@ -187,7 +187,7 @@ export default function Home({}) {
       </div>
       <div className={styles.SectionFour}>
         <Button title={'Nossas especialidades'} id={11} />
-        <Container content={'Nossa equipe conta com uma equipe de médicos oftalmologistas capacitados para a realização do tratamento de todas essas especialidades. Além disso, utilizamos os equipamentos mais modernos disponíveis e contamos com profissionais com vasta experiência.'} title={'A Americas Oftalmocenter conta com oftalmologista especializados para iniciar seu tratamento'} idLabel={1} star>
+        <Container title={'A Americas Oftalmocenter conta com oftalmologista especializados para iniciar seu tratamento'} star content={'Nossa equipe conta com uma equipe de médicos oftalmologistas capacitados para a realização do tratamento de todas essas especialidades. Além disso, utilizamos os equipamentos mais modernos disponíveis e contamos com profissionais com vasta experiência.'} idLabel={3} >
           <CardEspecialidades title={'Cirurgia de Catarata'} image={cardEspecialidades1} />
           <CardEspecialidades title={'Crosslinking'} image={cardEspecialidades2} />
           <CardEspecialidades title={'Vitrectomia'} image={cardEspecialidades3} />
@@ -196,15 +196,16 @@ export default function Home({}) {
           <CardEspecialidades title={'Blefaropastia'} image={cardEspecialidades6} />
           <CardEspecialidades title={'Cirurgia Antiglaucomatosa'} image={cardEspecialidades7} />
         </Container>
-        <div style={{margin: '6rem'}}>
+        <div style={{margin: '4rem 0 8rem'}}>
         <p style={{fontWeight: '700', fontSize: '14px', lineHeight: '19px'}}>
           Entre em contato com a gente para agendar sua consulta.
         </p>
-        <Button title={'Agendar consulta'} id={1} />
+        <Button title={'Agendar consultas e exames'} id={1} />
         </div>
       </div>
 
       <div className={styles.SectionFive} >
+      <Button title={'Nossos Médicos'} id={11} />
         <Container label={'Nossos médicos'} content={'Nosso corpo clínico é composto por mais de 65 médicos oftalmologistas prontos para lhe atender em todas as áreas clínicas e cirúrgicas da oftalmologia. São profissionais comprometidos em prestar aos nossos pacientes o mais alto nível de qualidade e segurança.'} title={'Aqui você encontra os melhores oftalmologistas do Rio de Janeiro'} idLabel={1}>
         </Container>
         <Medicos />
@@ -261,21 +262,22 @@ export default function Home({}) {
 
       <div className={styles.SectionSeven}>
         <div className="container">
-          <div className={styles.oftalmoKids}>
-            <Image src={oftalmoKids} />
-          </div>
           <div className="row">
             <div className="col-6">
               <Image src={oftalmoPic} />
             </div>
             <div className="col-6 d-flex flex-column">
+            <div className={styles.oftalmoKids}>
+              <Image src={oftalmoKids} />
+            </div>
+            <Button title={'Oftalmolofia infantil'} id={11} />
               <Container
                 label={'Oftalmologia Infantil'}
                 title={'Todas as nossas unidades contam com médicos oftalmologistas pediátricos para atender nossos pequenos pacientes.'}
                 content={'Preparamos uma unidade temática na Barra da Tijuca para receber os seus filhos com muito carinho.Personagens temáticos, parquinho e ambiente infantil fazem da consulta das crianças uma experiência lúdica.'}
               >
               </Container>
-              <p style={{textAlign: 'left',padding: '0.5rem 1rem',marginTop: '-1rem'}}>Acesse o site da Americas OftalmoKids para saber mais.</p>
+              <p style={{textAlign: 'left',padding: '0.5rem 1rem',marginTop: '-1rem'}}>Acesse o site da <b>Americas OftalmoKids</b> para saber mais.</p>
               <Button title={'Visitar Oftalmokids'} id={1} />
             </div>
           </div>
@@ -283,9 +285,7 @@ export default function Home({}) {
          
           
           <div className='container'>
-          <p style={{textAlign: 'center', margin: '3rem 0'}}>
-            Lorem ipsum dolor sit amet consectetur. Vel enim et tortor ut nam suspendisse.
-          </p>
+          
             <div className='row'>
             <div className={styles.slideKids}>
             <Swiper
@@ -326,6 +326,7 @@ export default function Home({}) {
         <div className="container">
           <div className="row">
             <div className="col-12">
+              <Button title={'Depoimentos'} id={11} />
               <Container label={'Depoimentos'} title={'O que dizem nossos clientes'} content={' '} />
               <div className={styles.slideDepoiments}>
                 <Swiper
@@ -349,9 +350,7 @@ export default function Home({}) {
                   </SwiperSlide>
                 </Swiper>
               </div>
-              <div style={{textAlign: 'center',margin: '1rem 0 2rem 0'}}>
-                <Button title={'Agendar consulta'} id={1} />
-              </div>
+              
             </div>
           </div>
         </div>
@@ -361,6 +360,7 @@ export default function Home({}) {
         <div className="container">
           <div className="row">
             <div className="col-12">
+              <Button title={'Planos e convênios'} id={11} />
               <Container label={'Planos e convênios'} title={'A Americas Oftalmocenter aceita os principais planos de saúde e convênios médicos.'} content={'Conheça a rede credenciada e agende sua consulta.'} />              <div className={styles.Convenios}>
                 <Swiper
                   modules={[Navigation,Pagination,Scrollbar,A11y]}
@@ -437,6 +437,7 @@ export default function Home({}) {
         <div className="container">
           <div className="row">
             <div className="col-12">
+              <Button title={'Aprenda mais'} id={11} />
               <Container label={'Aprenda mais'} title={'Nossos artigos publicados'} content={' '} />
               <div className={styles.postsBlog}>
                 <Merda />
@@ -585,7 +586,7 @@ export default function Home({}) {
                   <div className={styles.formWrapper}>
                     <div className="col-12">
                       <form action="">
-                        <div style={{padding: '0 16px'}}>
+                        <div>
                         <Button title={'Fale Conosco'} id={11} />
                         </div>
                         <h5>

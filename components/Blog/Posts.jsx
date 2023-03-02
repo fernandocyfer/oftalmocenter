@@ -15,17 +15,19 @@ function PostList() {
   }, []);
 
   return (
-    <div className="container d-flex">
+    <div className="container d-flex justify-content-center">
         {posts.map(post => (
-          <div className=''>
-            <div key={post.id} className={styles.postsBlog}>
-            <img src={post.uagb_featured_image_src.full[0]} alt={post.title.rendered} style={{width:'383px'}} />
-            <p>{post.categories[0].name}</p>
-            <h2>{post.title.rendered}</h2>
-            <p className="postDate" >{new Date(post.date).toLocaleDateString()}</p>
-            <p>{post.excerpt.rendered.substring(3, 203)}...</p>
-            <a href={post.link}>Leia mais</a>
-          </div>
+          <div className='row'>
+            <div className={styles.boxxx}>
+              <div key={post.id} className={styles.postsBox}>
+                <img src={post.uagb_featured_image_src.full[0]} alt={post.title.rendered} />
+                <p>{post.categories[0].name}</p>
+                <h2>{post.title.rendered}</h2>
+                <p className={styles.postDate} >{new Date(post.date).toLocaleDateString()}</p>
+                <p className={styles.postExcerpt}> {post.excerpt.rendered.substring(3, 240)}...</p>
+                <a className={styles.postReadMore} href={post.link}>Leia mais...</a>
+              </div>
+            </div>
           </div>
         ))}
     </div>
