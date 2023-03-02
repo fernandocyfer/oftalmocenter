@@ -24,7 +24,7 @@ function PostList() {
                 <p>{post.categories[0].name}</p>
                 <h2>{post.title.rendered}</h2>
                 <p className={styles.postDate} >{new Date(post.date).toLocaleDateString()}</p>
-                <p className={styles.postExcerpt}> {post.excerpt.rendered.substring(3, 240)}...</p>
+                <p className={styles.postExcerpt}> {post.excerpt.rendered.substring(3, 245)}...</p>
                 <a className={styles.postReadMore} href={post.link}>Leia mais...</a>
               </div>
             </div>
