@@ -14,6 +14,18 @@ export default function Navbar({footer}) {
   const navigation=[
     {name: 'Home',href: '/'},
     {name: 'O Grupo', href: '/'},
+    {name: 'Equipe Médica',href: '/'},
+    {name: 'Convênios',href: '/'},
+    {name: 'Unidades',href: '/'},
+    {name: 'Serviços',href: '/'},
+    {name: 'Aprenda mais',href: '/'},
+    {name: 'Catarata', href:'/'}
+  ]
+
+  {/*
+  const navigation=[
+    {name: 'Home',href: '/'},
+    {name: 'O Grupo', href: '/'},
     {name: 'Equipe Médica',href: '/equipe'},
     {name: 'Convênios',href: '/convenios'},
     {name: 'Unidades',href: '/unidades'},
@@ -21,6 +33,7 @@ export default function Navbar({footer}) {
     {name: 'Aprenda mais',href: '/aprenda-mais'},
     {name: 'Catarata', href:'/'}
   ]
+*/}
 
   const router=useRouter()
 
