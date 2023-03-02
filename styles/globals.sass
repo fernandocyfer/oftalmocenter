@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Sen&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap')
+
+@import 'variables'
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+html, body
+  font-family: 'Sen', sans-serif
+  transition: 0.2s
+  font-size: 16px
+  line-height: 1.5
+  //color: #333
+  color: #003057
+  background: #FFFFFF
+  a
+    //color: #333
+    color: #003057
+    text-decoration: none
+    &:hover
+      color: #333
+      text-decoration: none
+  h1, h2, h3, h4, h5, h6
+    font-family: 'Sen', sans-serif
+    font-weight: 700
+    line-height: 1.2
+    margin-top: 0
+    margin-bottom: 0.5rem
+
+  h1
+    font-size: 3rem
+    line-height: 4rem
+  h2
+    font-size: 2.25rem
+    line-height: 3rem
+
+  h3
+    font-size: 1.75rem
+    line-height: 2.25rem
+
+  h4
+    font-size: 1.5rem
+    line-height: 2rem
+
+  h5
+    font-size: 1.25rem
+    line-height: 2rem
+
+  h6
+    font-size: 1rem
+    line-height: 1.5rem
+
+  p
+    line-height: 22px
+    font-weight: 400
+    font-size: 1rem
+    line-height: 1.75rem
+  .p-2
+    font-size: 0.875rem
+    line-height: 1.25rem
+  .p-label
+    font-weight: 700
+    font-size: 0.875rem
+    line-height: 1.25rem
+
+  .container
+    max-width: 1140px
+    margin-right: auto
+    margin-left: auto
+    padding-right: 15px
+    padding-left: 15px
+    @media (min-width: 576px)
+      max-width: 540px
+    @media (min-width: 768px)
+      max-width: 720px
+    @media (min-width: 992px)
+      max-width: 960px
+    @media (min-width: 1200px)
+      max-width: 1140px
+
+.accordion-button:not(.collapsed)::after
+  background-image: url("../public/icons/collapse-icon.svg") !important
+  background-position: center
+
+.input-group
+  border: 1px solid #D5DAE1
+  border-radius: 4px
+  box-shadow: 0px 0.56042px 1.12084px rgba(0, 0, 0, 0.05)
+
+.input-group-text
+  background: #fff
+  padding: 8px
+  border: none
+
+.form-control
+  font-size: 12px
+  font-weight: 400
+  border: none
+
+  .swiper-button-prev, .swiper-rtl .swiper-button-next
+  left: auto !important
+.swiper-button-next
+  padding-left: 20px !important
+.swiper
+  width: auto
+  margin: 0 30px
+

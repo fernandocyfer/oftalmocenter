@@ -1,0 +1,25 @@
+.banner
+    height: 100%
+    height: 55vw
+    background-size: cover !important
+    background-position: center
+    background-repeat: no-repeat !important
+    display: flex
+    align-items: center
+    //background: linear-gradient(90deg, rgba(72, 156, 255, 0.6375) 0%, rgba(255, 255, 255, 0.1875) 100%), url(../public/images/container1-bg.png)
+    background: url(../public/images/container1-bg.png)
+
+    //background: linear-gradient(90deg, rgba(72, 156, 255, 0.6375) 0%, rgba(255, 255, 255, 0.1875) 100%)
+.overlay
+    // width: 100%
+    // background: rgba(15, 22, 33, 0)
+    // mix-blend-mode: hard-light
+    // position: absolute
+    // height: 80vh
+    // opacity: 0.6
+
+@media screen and (max-width: 1060px)
+    .banner, .overlay
+        height: 90vh
+    .overlay
+        opacity: 0.9
