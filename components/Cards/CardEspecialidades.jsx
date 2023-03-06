@@ -12,8 +12,9 @@ export default function CardEspecialidades({title,image,href}) {
             </div>
             <Link href={href? href:''}>
                 <div className={styles.CardEspecialidades__content}>
-                    <h5>{title? title:"Título"}</h5>
+                    <h5>{title? title:"Título"}
                     <Image src={arrowIcon} />
+                    </h5>
                 </div>
             </Link>
         </div>
