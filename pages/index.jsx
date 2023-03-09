@@ -290,10 +290,11 @@ export default function Home({}) {
             <div className={styles.slideKids}>
             <Swiper
               modules={[Navigation,Pagination,Scrollbar,A11y]}
-              spaceBetween={10}
+              spaceBetween={15}
               slidesPerView={5}
               Autoplay={true}
               HashNavigation={true}
+              grabCursor={true}
               onSlideChange={() => console.log('slide change')}
               onSwiper={(swiper) => console.log(swiper)}
               navigation
@@ -364,7 +365,7 @@ export default function Home({}) {
               <Container label={'Planos e convênios'} title={'A Americas Oftalmocenter aceita os principais planos de saúde e convênios médicos.'} content={'Conheça a rede credenciada e agende sua consulta.'} />              <div className={styles.Convenios}>
                 <Swiper
                   modules={[Navigation,Pagination,Scrollbar,A11y]}
-                  spaceBetween={0}
+                  spaceBetween={-110}
                   slidesPerView={5}
                   Autoplay={true}
                   HashNavigation={true}
@@ -426,7 +427,7 @@ export default function Home({}) {
                 </Swiper>
               </div>
             </div>
-            <div style={{textAlign: 'center',margin: '1rem 0 2rem 0'}}>
+            <div>
               <Button title={'Consulte nossos convênios'} id={1} />
             </div>
           </div>

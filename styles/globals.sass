@@ -102,8 +102,27 @@ html, body
 
   .swiper-button-prev, .swiper-rtl .swiper-button-next
   left: auto !important
+
+.swiper-button-prev
+  padding: 20px
+  background-color: #E0E8FA
+  border-radius: 2px
+  left: 0 !important 
+.swiper-button-prev::after
+  font-size: 20px !important
+
+.swiper-button-prev.swiper-button-disabled
+  opacity: unset !important
+
+
 .swiper-button-next
-  padding-left: 20px !important
+  padding: 20px
+  background-color: #E0E8FA
+  border-radius: 2px
+  right: 0 !important
+.swiper-button-next::after
+  font-size: 20px !important  
+
 .swiper
   width: auto
   margin: 0 30px
