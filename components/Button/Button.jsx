@@ -5,6 +5,7 @@ import arrowRightWhite from '../../public/icons/arrow-right-white.svg'
 import styles from '../../styles/button.module.sass'
 import whatsAppButton from '../../public/icons/social/whatsapp.png'
 import whatsAppButtonDois from '../../public/icons/social/whatsappDois.png'
+import iconArrowError from '../../public/icons/iconArrowError404.svg'
 
 export function Button({type,title,id,to,icon,dark=false}) {
   return (
@@ -27,7 +28,9 @@ export function Button({type,title,id,to,icon,dark=false}) {
                               ? styles.btn_eleven
                                 :id==12
                                   ? styles.btn_twelve
-                                   :null                      
+                                    :id==13
+                                      ? styles.btn_treze
+                                        :null                      
         }
         type={type}
       >
@@ -36,6 +39,7 @@ export function Button({type,title,id,to,icon,dark=false}) {
         {id==4? (<Image src={icon? icon:arrowRight} id="icon" />):null}
         {id==10? (<Image src={whatsAppButton} id="iconWhatsButton"/>):null}
         {id==12? (<Image src={whatsAppButtonDois} id="iconWhatsButtonDois"/>):null}
+        {id==13? (<Image src={iconArrowError} id="iconArrowError"/>):null}
       </button>
     </Link>
   )

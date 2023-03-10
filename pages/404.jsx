@@ -25,7 +25,7 @@ function NotFound() {
                 <h3>A página que você buscou não foi encontrada.</h3>
                 <Image src={DivisorError} />
                 <p>A página solicitada não pôde ser encontrada.</p>
-                <Button title={'VOLTAR AO INÍCIO'} id={2} to={'/'} />
+                <Button title={'VOLTAR AO INÍCIO'} id={13} to={'/'} />
               </div>
               <div className='col-md-6'>
                 <Image src={ImageError} />
