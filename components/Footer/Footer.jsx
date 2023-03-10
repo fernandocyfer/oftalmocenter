@@ -13,7 +13,7 @@ const Footer=() => {
         <div className={styles.Footer}>
             <div className="container">
                 <div className="row">
-                    <div className="col-12 d-flex">
+                    <div className="col-12 d-flex footerRowDois">
                         <div className="col-2">
                             <div className={styles.LogoBox}>
                                 <Image src={logo} />
@@ -25,9 +25,9 @@ const Footer=() => {
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-12 d-flex">
-                        <div className="col-12">
-                            <ul className='d-flex'>
+                    <div className="col-12 containerMenusMobile">
+                        <div>
+                            <ul className='footerMenuUm'>
                                 <li>
                                     <Link href={'/'}>
                                         Equipe Médica
@@ -43,6 +43,10 @@ const Footer=() => {
                                         Unidades
                                     </Link>
                                 </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul className='footerMenuDois'>
                                 <li>
                                     <Link href={'/'}>
                                         Serviços
@@ -65,7 +69,8 @@ const Footer=() => {
             </div>
         </div>
         <div className={styles.SocialMedia}>
-            <div className="container d-flex justify-content-between ">
+            <div className='container'>
+            <div className={styles.Copyright}>
                 <div className="row">
                     <div className="col-12 d-flex align-items-center">
                         <p>
@@ -104,6 +109,7 @@ const Footer=() => {
                         </ul>
                     </div>
                 </div>
+            </div>
             </div>
         </div>
     </>

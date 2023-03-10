@@ -2,17 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap')
 
 .Hero
-    width: 647px
+    //width: 647px
+    width: auto
     margin-left: 7.5vw
-    //background: rgba(255, 255, 255, 0.45)
     backdrop-filter: blur(4px)
     border-radius: 16px
     padding: 30px
-    //box-shadow: 0px 6px 45px rgba(0, 114, 197, 0.18)
     h1
         color: #003057
         font-size: 32px
-        font-weight: 600
+        font-weight: 700
         line-height: 44px
         font-family: 'Noto Sans SC', Helvetica, arial, sans-serif
     p
@@ -25,29 +24,44 @@
     button:nth-child(2)
         margin: 0 0 0 1rem
 
-.whatsappButton 
-    //background: linear-gradient(90deg, #0D51DA 0%, #0079FF 77.08%)
+
+
+@media screen and (max-width: 676px) 
+    .Hero
+        padding: 30px 0
+        backdrop-filter: none
+        h1
+            font-size: 16px
+            line-height: 22px
+
+        button:nth-child(2)
+            display: none
+
 
 
 .SelectBox
     display: flex
-    //margin-top: -3rem
     margin-top: -5.5rem
     border-radius: 8px
     justify-content: space-between
     background-color: transparent
+
+@media (max-width: 676px)
+    .SelectBox
+        flex-direction: column
+        gap: 35px
+        align-items: center
+        background: radial-gradient(76.26% 198.87% at 50% 50.06%, #1085E5 0%, #0C52DB 100%)
+        margin: 0 -20px
+        border: none
+
+
 .SectionTwo
-    //width: 100%
-    //margin: 0 auto
     padding-top: 4.375rem
-    //background-color: $color-home-sectiontwo
     background: radial-gradient(76.26% 198.87% at 50% 50.06%, #1085E5 0%, #0C52DB 100%)
     display: flex
     justify-content: center
     .SectionTwo_container
-        //width: 80%
-        //width: 90%
-        //margin: 0 auto
         display: flex
         justify-content: center
         align-items: center
@@ -63,6 +77,17 @@
             background-color: #fff !important
             display: none !important
 
+.SectionTwoMobile
+    display: block
+
+@media screen and (min-width: 767px)
+    .SectionTwoMobile
+        display: none
+
+@media (max-width: 767px)
+    .SectionTwo
+        display: none
+
 .SectionTwo_boxTwo
     padding: 0 2rem
 
@@ -71,8 +96,6 @@
         color: #002340
     p
         color: #003057
-        //width: 80%
-        //margin: 1rem 0
         font-weight: 400
         line-height: 22px
     h2
@@ -80,11 +103,26 @@
         font-weight: 700 !important
         line-height: 34px
 
+@media (max-width:767px)
+    .SectionTwo_boxTwo
+        h2
+            font-size: 16px
+            line-height: 22px
+            width: 100% !important
+        p
+            font-size: 12px
+            line-height: 16px
+
 .mtoDoido
     background: radial-gradient(76.26% 198.87% at 50% 50.06%, #1085E5 0%, #0C52DB 100%)
     display: flex
     justify-content: center
     padding: 90px 20px 200px 
+
+@media (max-width: 676px)
+    .mtoDoido
+        padding: 0px 0px 50px 
+
     
 .maisDoidoAinda 
     display: flex
@@ -323,6 +361,26 @@
             button
                 &:nth-last-of-type(1)
                     margin: 10px 0
+
+@media screen and (max-width: 767px)
+
+    .Contact
+        display: grid !important
+        gap: 15px
+
+        .ContactItem
+            flex-direction: initial !important
+            justify-content: normal
+            gap: 25px
+
+            p
+                font-size: 12px !important
+
+            button
+                font-size: 12px !important
+    
+
+
 .FormContainer
     background: #FFFFFF
     box-shadow: 0px 6px 15px rgba(0, 114, 197, 0.18)
@@ -336,6 +394,7 @@
     font-family: 'Noto Sans SC', Helvetica, arial, sans-serif
     margin-left: 8%
     margin-right: 8%
+
     h5
         padding: 1rem
         font-weight: 700
@@ -364,6 +423,29 @@
             font-size: 12px
             line-height: 13px
             color: #002340
+
+@media screen and (max-width: 767px)
+    .FormContainer
+        div
+            &:nth-last-of-type(1)
+                flex-direction: column
+
+        .formPhoto
+            span
+                width: 270px !important
+
+        h5
+            font-size: 16px
+            line-height: 18px
+        
+        .formWrapper
+            padding: 1rem 0
+
+        .formGroup
+            button
+                min-width: 180px
+
+
 .boxxx
     width: 415px
     margin: 30px

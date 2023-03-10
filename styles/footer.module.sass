@@ -3,6 +3,8 @@
     color: white
     padding: 2rem 1rem
     text-align: left
+    display: flex
+    justify-content: space-between
     .LogoBox
         width: 120px
         height: 80px
@@ -24,6 +26,11 @@
 
             &:first-of-type
                 margin-left: 0
+
+.Copyright
+    display: flex
+    justify-content: space-between
+    
 .SocialMedia
     display: flex
     justify-content: space-between
@@ -56,3 +63,19 @@
     p
         margin: 0
         font-weight: 300 !important
+
+
+@media screen and (max-width: 767px)
+    .Copyright
+        flex-direction: column-reverse
+        gap: 30px
+        align-items: center
+        text-align: center
+
+
+@media screen and (max-width: 767px)
+    .Footer
+        ul
+            li
+                margin: 2rem 0
+

@@ -6,7 +6,7 @@ import IconDefault from '../../public/icons/form-icon.svg'
 const Statistic=({image,title,subtitle}) => {
     return (
         <div className={styles.StatisticBox}>
-            <div className='d-flex content-arround align-items-center'>
+            <div className='d-flex align-items-center statisticBoxMobile'>
                 <div className={styles.ImageStatistic}><Image src={image? image:IconDefault} /></div>
                 <div className={styles.boxDescription}>
                     <p className={styles.Title}>{title? title:'Título do dado'}</p>

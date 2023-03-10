@@ -5,6 +5,7 @@ import styles from '../../styles/navbar.module.sass'
 import hamburguer from '../../public/mobile/hamburguer.webp'
 import {useRouter} from 'next/router'
 import {Button} from '../Button/Button'
+import btnEmergency from '../../public/icons/btnEmergency.svg'
 
 export default function Navbar({footer}) {
   function classNames(...classes) {
@@ -66,12 +67,21 @@ export default function Navbar({footer}) {
           ))}
         </div>
 
-        <div className='d-flex gap-3' >
-          {/*<Button title={`Emergência 24h`} id={5} to={'/'} /> */}
+        
+
+        <div className='gap-3 navMobileAg' >
           <Button title={'AGENDE AGORA'} id={1} to={'/agende-sua-consulta'} />
         </div>
 
         <div className={styles.mobileMenu}>
+        <div className='d-flex gap-3 navMobileEmergency' >
+          <Image
+            width={45}
+            height={45}
+            src={btnEmergency}
+            to={'/'}
+          />
+        </div>
           <button
             className="btn btn-primary"
             type="button"

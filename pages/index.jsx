@@ -16,6 +16,8 @@ import Merda from '../components/Blog/Posts'
 
 import glassFrame from '../public/images/glass.svg'
 
+import containerBackgroundDoisMobile from '../public/mobile/videomobilebg.svg'
+
 import diferencial1 from '../public/icons/diferencial-1.svg'
 import diferencial2 from '../public/icons/diferencial-2.svg'
 import diferencial3 from '../public/icons/diferencial-3.svg'
@@ -114,7 +116,7 @@ export default function Home({}) {
                   <Button
                     title={'Agendar consulta'}
                     id={10}
-                    to={'/'}
+                    to={'https://web.whatsapp.com/send?phone=552124961161&text='}
                   />
                   <Button
                     title={'Emergências 24h'}
@@ -127,6 +129,37 @@ export default function Home({}) {
           </div>
         </div>
       </Banner>
+
+      <div className={styles.SectionTwoMobile}>
+        <div className={styles.SectionTwo_boxTwo}>
+              <Button title={'Nossas Clínicas'} id={11} />
+              <h2>A American Oftalmocenter conta com 5 unidades no Rio de Janeiro.</h2>
+              <p>
+              Escolha uma de nossas clínicas oftalmológicas. Veja a mais próxima de você!
+              </p>
+              <div className='form-group'>
+                <select onchange="window.location.href=this.value;" className='form-control-lg' name='unidades'>
+                    <option selected>Escolha sua clínica aqui</option>
+                    <option value="/">Unidade Barra da Tijuca</option>
+                    <option value="/">Unidade Barra da Tijuca</option>
+                    <option value="/">Unidade Barra da Tijuca</option>
+                    <option value="/">Unidade Barra da Tijuca</option>
+                    <option value="/">Unidade Barra da Tijuca</option>
+                </select>
+              </div>
+        </div>
+        
+        <div className='container p-4'>
+          <Image src={containerBackgroundDoisMobile} alt={'Criança realizando exame'} title={'Criança realizando exame'} layout={'responsive'} />
+        </div>
+        <div className='container d-flex justify-content-center pb-5 mb-5 mt-5'>
+        <Button 
+          title={'Agendar consultar e exames'}
+          id={10}
+          to={'/'}
+        />
+        </div>
+      </div>
 
       <div className={styles.SectionTwo}>
         <div className={styles.SectionTwo_container}>
@@ -173,7 +206,7 @@ export default function Home({}) {
           <Statistic image={estetoFormIcon} title={'+800k'} subtitle={'Atendimentos realizados'} />
         </div>
       </div>
-      <div className="container">
+      <div className="container containerStatisticBoxMobile">
         <div className="row justify-content-center">
           <div>
             <div className={styles.SelectBox}>
@@ -578,7 +611,7 @@ export default function Home({}) {
                 </div>
               </div>
               <div className={styles.FormContainer}>
-                <div className="col-12 d-flex justify-content-center">
+                <div className="col-12 d-flex justify-content-center porraa">
                   <div className="col-5 d-flex align-items-center">
                     <div className={styles.formPhoto}>
                       <Image src={formPhoto} />

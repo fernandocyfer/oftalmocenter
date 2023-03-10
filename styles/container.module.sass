@@ -4,9 +4,6 @@
     display: flex
     flex-wrap: wrap
     justify-content: center
-    //width: 80%
-    //column-gap: 25px !important
-    //gap: 15px
 
 .ContainerDefault
     h4
@@ -23,7 +20,6 @@
         color: #002340
 
 .ContainerVariant
-    //padding: 10rem 0
     padding: 4rem 0
     color: $color_white
     background-position: center
@@ -44,6 +40,17 @@
         line-height: 22px
     span
         color: $color_white
+
+
+@media screen and (max-width: 767px)
+    .ContainerDark
+        h4
+            font-size: 16px
+            line-height: 22px
+
+        p
+            font-size: 12px
+            line-height: 16px
 
 .Label__Star
     display: flex
