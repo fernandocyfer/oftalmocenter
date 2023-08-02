@@ -1,3 +1,29 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:05f3df8c4e307a8e663c8a8d1b31a973dee9b301f4fb727d4a5ee1f68ad9f9da
-size 578
+const API_KEY=process.env.API_TOKEN;
+const API_URL=process.env.BASE_URL;
+
+const dataToSend={
+    "token": API_KEY
+};
+
+const requestOptions={
+    method: 'POST',headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+        'Access-Control-Allow-Headers': 'Content-Type, Authorization'
+    },body: JSON.stringify(dataToSend)
+};
+
+
+const getMedicos=async () => {
+    const URL=`${API_URL}medico`;
+
+    try {
+        const response=await fetch(URL,requestOptions);
+        return await response.json();
+    } catch(error) {
+        return console.log("Ocorreu um erro: "+error);
+    }
+}
+
+export {getMedicos}

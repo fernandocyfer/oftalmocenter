@@ -1,3 +1,40 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ec68d570805b0c71527d72dd588973a4d52516c6a364c1b320fe6c461a0d39b8
-size 845
+import styles from '/styles/medicos.module.sass'
+
+import formatarCRM from '/pipes/crm.pipe'
+import erro from '/public/images/sirueta.png'
+
+
+const MedicoSingle=({medico}) => {
+
+    return (<>
+        <div className={styles.medicosSingle}>
+            <div className={styles.medicosSingle_Photo}>
+                <img src={medico?.image?.length.toString()>1&&medico.image!==null? medico.image:erro.src}
+                    style={{width: '300px',height: '375px'}} />
+            </div>
+            <div className={styles.medicosSingle_Description}>
+                <p>Dr(a). {medico?.name??'Nome não encontrado :('}</p>
+                <div className={'d-flex justify-content-center'}>
+                    <span>CRM/RJ {formatarCRM(medico?.crm?.toString()??'')}</span>
+                    &nbsp;&nbsp;&nbsp;
+                    <span>RQE/RJ {medico?.rqe??'0000'}</span>
+                </div>
+                <p>
+                    {medico?.especialidadeonmedico? medico.especialidadeonmedico?.map((esp,index) => {
+                        if(index===medico.especialidadeonmedico.length-1) {
+                            return esp?.especialidades.especialidade+'.'
+                        } else {
+                            return esp?.especialidades.especialidade+', '
+                        }
+                    }):''}
+                </p>
+            </div>
+        </div>
+
+    </>
+
+    )
+}
+
+
+export default MedicoSingle;
