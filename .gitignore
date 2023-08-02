@@ -1,3 +1,2 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:84f806a4e96dc49777a083792e0359bc2bf5006d84758642bedf1b637a189200
-size 20
+node_modules/
+.env
