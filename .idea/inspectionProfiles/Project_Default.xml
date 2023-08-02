@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:558018494dc41da466046056b52d168ed8c9433720724120bec46103c884cebb
-size 462
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="Eslint" enabled="true" level="WARNING" enabled_by_default="true" />
+  </profile>
+</component>

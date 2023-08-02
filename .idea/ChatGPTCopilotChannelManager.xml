@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2f1cb593ee20f33fb72c9139ace4e3488bc1dfc6e1bb3e196a2a95d6163e4ef1
-size 450
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChatGPTCopilotChannelManager">
+    <chatChannels>
+      <chatChannel>
+        <option name="messages" />
+      </chatChannel>
+    </chatChannels>
+  </component>
+</project>

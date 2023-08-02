@@ -1,3 +1,9 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9282f1b456fb4a09c5f3ebb6b99a1182e46b92088c86578051fe85dd6834085f
-size 318
+function formatarCRM(input = '') {
+    const numeros = input.replace(/\D/g, '');
+    const primeiraParte = numeros.slice(0, 2);
+    const segundaParte = numeros.slice(2, 6);
+    const terceiraParte = numeros.slice(6, 7);
+    return `${primeiraParte}.${segundaParte}-${terceiraParte}`;
+}
+
+export default formatarCRM;

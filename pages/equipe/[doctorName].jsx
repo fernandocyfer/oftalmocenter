@@ -1,4 +1,3 @@
-
 import styles from '../../styles/doctorSimple.module.sass'
 
 import circle from '/public/images/circle.png'
@@ -8,12 +7,15 @@ import {useRouter} from "next/router";
 import formatarCRM from "../../pipes/crm.pipe";
 
 
-const DoctorPage=({data}) => {
+const DoctorPage = ({data}) => {
 
-    const router=useRouter();
-    const idDocRender=router.asPath.split('/')[2];
-    const docList=data?.filter(doc => doc.id===idDocRender);
-    const docSelected=docList[0];
+    const router = useRouter();
+    const idDocRender = router.asPath.split('/')[2];
+    const docList = data?.filter(doc => doc.id === idDocRender);
+    const docSelected = docList[0];
+    if (docSelected === [] || docSelected === null || docSelected === undefined) {
+        router.route = '/404';
+    }
 
     console.log(docSelected);
 
@@ -33,9 +35,9 @@ const DoctorPage=({data}) => {
                             alignItems: 'flex-end'
                         }}>
                             <img src={circle.src}
-                                style={{
-                                    width: '320px',height: '320px'
-                                }} />
+                                 style={{
+                                     width: '320px', height: '320px'
+                                 }}/>
                         </div>
                     </div>
                 </div>
@@ -48,7 +50,7 @@ const DoctorPage=({data}) => {
                                 <div className={'d-flex'}>
                                     <p>CRM/RJ: {formatarCRM(docSelected?.crm)} </p>
 
-                                    <p className={'mx-5'}>RQE: {docSelected?.rqe? docSelected?.rqe:''}</p>
+                                    <p className={'mx-5'}>RQE: {docSelected?.rqe ? docSelected?.rqe : ''}</p>
                                 </div>
                                 <span className={styles.Line}></span>
                                 <p className={styles.especialidades}>Especialidades</p>
@@ -82,7 +84,7 @@ const DoctorPage=({data}) => {
             <h3>
                 Trabalhos Publicados, Aulas, Palestras e Apresentação de Casos:
             </h3>
-            <br />
+            <br/>
             <p>
                 {docSelected?.trabalhos}
             </p>
@@ -94,15 +96,15 @@ const DoctorPage=({data}) => {
 
 export async function getServerSideProps() {
 
-    const API_KEY=process.env.API_TOKEN;
-    const API_URL=process.env.BASE_URL;
-    const dataToSend={
+    const API_KEY = process.env.API_TOKEN;
+    const API_URL = process.env.BASE_URL;
+    const dataToSend = {
         "token": API_KEY
     };
 
 
-    const response=await axios.post(`${API_URL}/medico`,dataToSend);
-    const data=response.data;
+    const response = await axios.post(`${API_URL}/medico`, dataToSend);
+    const data = response.data;
 
     return {
         props: {
@@ -113,3 +115,7 @@ export async function getServerSideProps() {
 
 
 export default DoctorPage;
+
+
+
+
