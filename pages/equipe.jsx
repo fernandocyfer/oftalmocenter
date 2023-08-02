@@ -10,50 +10,50 @@ import Search from "../components/Search/Search";
 import MedicoConsulta from "../components/Medicos/MedicoConsulta";
 import Faq from "../components/Faq/faq";
 import FormAtendimento from "../components/FormAtendimento/FormAtendimento";
-import {useEffect,useState} from "react";
+import {useEffect, useState} from "react";
 import {getMedicos} from "../services/app.service";
 
 
 import Pagination from '@mui/material/Pagination';
-import {Box,PaginationItem,Stack} from "@mui/material";
+import {Box, PaginationItem, Stack} from "@mui/material";
 
 
 export default function EquipeMedica() {
 
-    const [listMedicos,setListMedicos]=useState([]);
-    const [page,setPage]=useState(1);
-    const [listaMostrada,handleListaMostrada]=useState([]);
+    const [listMedicos, setListMedicos] = useState([]);
+    const [page, setPage] = useState(1);
+    const [listaMostrada, handleListaMostrada] = useState([]);
 
-    const handlePagination=(index,page) => {
+    const handlePagination = (index, page) => {
         setPage(page)
     };
 
-    const updatePage=() => {
-        const lista=listMedicos;
-        const fim=(page*8);
-        const inicio=(page*8-8);
-        const novaLista=lista?.slice(inicio,fim);
+    const updatePage = () => {
+        const lista = listMedicos;
+        const fim = (page * 8);
+        const inicio = (page * 8 - 8);
+        const novaLista = lista?.slice(inicio, fim);
         handleListaMostrada(novaLista);
     }
 
     useEffect(() => {
         updatePage();
-    },[page])
+    }, [page])
 
     useEffect(() => {
-        const fetchMedicos=async () => {
+        const fetchMedicos = async () => {
             getMedicos().then((list) => {
                 setListMedicos(list);
-                handleListaMostrada(list.slice(0,8))
+                handleListaMostrada(list.slice(0, 8))
             }).catch((error) => {
-                console.log('Error: '+error)
+                console.log('Error: ' + error)
             })
         }
         fetchMedicos();
-    },[])
+    }, [])
 
 
-    const totalPages=listMedicos?.length===0? 1:Math.ceil(listMedicos?.length/8);
+    const totalPages = listMedicos?.length === 0 ? 1 : Math.ceil(listMedicos?.length / 8);
     return (<>
         <Banner id={2}>
             <div className="container-fluid d-flex justify-content-center align-items-center">
@@ -82,14 +82,14 @@ export default function EquipeMedica() {
                 </div>
             </div>
         </Banner>
-        <Breadcrum title={' Equipe Médica'} />
+        <Breadcrum title={' Equipe Médica'}/>
         <Search id={2}>
         </Search>
         <Box spacing={2}>
 
             <div className={'container mb-5 d-flex justify-content-between flex-wrap'}>
-                {listaMostrada.map((medico,i) => {
-                    return <MedicoConsulta medico={medico} key={i} />
+                {listaMostrada.map((medico, i) => {
+                    return <MedicoConsulta medico={medico} key={i}/>
                 })}
             </div>
             <div className={'container mb-5 d-flex justify-content-center'}>
@@ -102,7 +102,7 @@ export default function EquipeMedica() {
                     size="large"
                     onChange={handlePagination}
                     renderItem={(item) => (<PaginationItem
-                        slots={{previous: ArrowBackIcon,next: ArrowForwardIcon}}
+                        slots={{previous: ArrowBackIcon, next: ArrowForwardIcon}}
                         {...item}
                     />)}
                 />
@@ -111,8 +111,8 @@ export default function EquipeMedica() {
         </Box>
 
 
-        <Faq />
-        <FormAtendimento hasContact={false} />
+        <Faq/>
+        <FormAtendimento hasContact={false}/>
 
     </>)
 }

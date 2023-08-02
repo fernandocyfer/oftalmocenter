@@ -1,28 +1,25 @@
-const API_KEY=process.env.API_TOKEN;
-const API_URL=process.env.BASE_URL;
+const API_KEY = process.env.API_TOKEN;
+const API_URL = process.env.BASE_URL;
 
-const dataToSend={
+const dataToSend = {
     "token": API_KEY
 };
 
-const requestOptions={
-    method: 'POST',headers: {
+const requestOptions = {
+    method: 'POST', headers: {
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
-        'Access-Control-Allow-Headers': 'Content-Type, Authorization'
-    },body: JSON.stringify(dataToSend)
+    }, body: JSON.stringify(dataToSend)
 };
 
 
-const getMedicos=async () => {
-    const URL=`${API_URL}medico`;
+const getMedicos = async () => {
+    const URL = `${API_URL}medico`;
 
     try {
-        const response=await fetch(URL,requestOptions);
+        const response = await fetch(URL, requestOptions);
         return await response.json();
-    } catch(error) {
-        return console.log("Ocorreu um erro: "+error);
+    } catch (error) {
+        return console.log("Ocorreu um erro: " + error);
     }
 }
 
