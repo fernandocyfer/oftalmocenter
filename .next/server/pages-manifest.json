@@ -1,3 +1,9 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:59d55c7c120c0e300ef3dc8f2199d1282d3c02d0d603e7115fd99ecce467d9b9
-size 293
+{
+  "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/": "pages/index.js",
+  "/404": "pages/404.js",
+  "/equipe": "pages/equipe.js",
+  "/convenios": "pages/convenios.js"
+}
