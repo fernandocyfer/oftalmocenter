@@ -41,7 +41,7 @@ const Cirurgias = () => (<>
             </div>
         </div>
     </Banner>
-    <Breadcrumb to={'/servicos'}/>
+    <Breadcrumb to={'servicos/cirurgias'} title={'servicos / cirurgias'}/>
     <Search>
         <div className={'d-flex flex-column'}>
             <Button id={7} title={'Anestesista'}/>

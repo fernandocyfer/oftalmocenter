@@ -37,7 +37,7 @@ export default function Banner(props) {
                                     background: `url('${servicoBanner.src}')`,
                                     height: '511px'
 
-                                }) : id === 1 ? (
+                                }) : id === 10 ? (
                                 {
                                     background: `url('${examesBanner.src}')`,
                                     height: '511px'

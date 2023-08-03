@@ -12,7 +12,7 @@ import PlanosConvenios from "/components/PlanosConvenios/PlanosConvenios";
 import FormAtendimento from "/components/FormAtendimento/FormAtendimento";
 
 const Exames = () => (<>
-    <Banner id={1}>
+    <Banner id={10}>
         <div className="container-fluid">
             <div className="row d-flex justify-content-center">
                 <div className="col-6">
@@ -44,7 +44,7 @@ const Exames = () => (<>
             </div>
         </div>
     </Banner>
-    <Breadcrumb to={'/servicos'}/>
+    <Breadcrumb to={'/servicos/exames'} title={' servicos / exames'}/>
     <Search>
         <div className={'d-flex flex-column'}>
             <Button id={7} title={'Anestesista'}/>

@@ -24,19 +24,6 @@ export default function Navbar({footer}) {
         }]
     }, {name: 'Aprenda mais', href: '/'}, {name: 'Catarata', href: '/'}]
 
-    {/*
-  const navigation=[
-    {name: 'Home',href: '/'},
-    {name: 'O Grupo', href: '/'},
-    {name: 'Equipe Médica',href: '/equipe'},
-    {name: 'Convênios',href: '/convenios'},
-    {name: 'Unidades',href: '/unidades'},
-    {name: 'Serviços',href: '/servicos'},
-    {name: 'Aprenda mais',href: '/aprenda-mais'},
-    {name: 'Catarata', href:'/'}
-  ]
-*/
-    }
 
     const router = useRouter()
 
@@ -58,8 +45,6 @@ export default function Navbar({footer}) {
                         <div className="collapse navbar-collapse" id="navbarNavDropdown">
                             <ul className="navbar-nav">
                                 {navigation.map(item => {
-
-                                    console.log(item.subRoutes)
                                     if (!item.subRoutes?.length > 0) {
                                         return (<Link href={item.href} key={item.name}>
                                             <a
@@ -72,36 +57,33 @@ export default function Navbar({footer}) {
                                             </a>
                                         </Link>)
                                     } else {
-                                        return (<Link href={item.href} key={item.name}>
-                                            <a
-                                                style={{margin: '0.7rem', color: 'blue'}}
-                                                className={classNames('inline-flex items-center px-1 border-b-2 text-sm font-medium', router.route === item.href ? styles.current : null)}
-                                                aria-current={router.route === item.href ? 'page' : undefined}
-                                            >
-                                                <li className="nav-item dropdown" style={{fontSize: '1rem'}}>
-                                                    <a className="nav-link dropdown-toggle" href="#"
-                                                       role="button"
-                                                       data-bs-toggle="dropdown" aria-expanded="false">
-                                                        {item.name}
-                                                    </a>
-                                                    <ul className="dropdown-menu">
-                                                        {item.subRoutes?.map((sub) => (
-
-                                                            <Link href={sub.href} key={item.name}>
-                                                                <a
-                                                                    className={classNames('inline-flex items-center border-b-2 text-sm font-medium dropdown-item', router.route === item.href ? styles.current : null)}
-                                                                    aria-current={router.route === item.href ? 'page' : undefined}
-                                                                >
-                                                                    <li className="nav-item" style={{fontSize: '1rem'}}>
-                                                                        {sub.name}
-                                                                    </li>
-                                                                </a>
-                                                            </Link>
-                                                        ))}
-                                                    </ul>
-                                                </li>
-                                            </a>
-                                        </Link>)
+                                        return (<a
+                                            style={{margin: '0.7rem', color: 'blue'}}
+                                            className={classNames('inline-flex items-center px-1 border-b-2 text-sm font-medium', router.route === item.href ? styles.current : null)}
+                                            aria-current={router.route === item.href ? 'page' : undefined}
+                                        >
+                                            <li className="nav-item dropdown" style={{fontSize: '1rem'}}>
+                                                <a className="nav-link dropdown-toggle" href="#"
+                                                   role="button"
+                                                   data-bs-toggle="dropdown" aria-expanded="false">
+                                                    {item.name}
+                                                </a>
+                                                <ul className="dropdown-menu">
+                                                    {item.subRoutes?.map((sub) => (
+                                                        <Link href={sub.href} key={item.name}>
+                                                            <a
+                                                                className={classNames('inline-flex items-center border-b-2 text-sm font-medium dropdown-item', router.route === item.href ? styles.current : null)}
+                                                                aria-current={router.route === item.href ? 'page' : undefined}
+                                                            >
+                                                                <li className="nav-item"
+                                                                    style={{fontSize: '1rem'}}>
+                                                                    {sub.name}
+                                                                </li>
+                                                            </a>
+                                                        </Link>))}
+                                                </ul>
+                                            </li>
+                                        </a>)
                                     }
                                 })}
                             </ul>
