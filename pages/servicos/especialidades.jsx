@@ -1,20 +1,17 @@
-import Banner from "../components/Banner/Banner";
-import styles from "../styles/servicos.module.sass";
-import stylesHome from "../styles/home.module.sass";
-import {Button} from "../components/Button/Button";
-import Breadcrumb from "../components/BreadCrumb/Breadcrum";
-import Search from "../components/Search/Search";
-import Container from "../components/Container/Container";
-import {Accordion} from "react-bootstrap";
-import Faq from "../components/Faq/faq";
-import Depoimentos from "../components/Depoimentos/Depoimentos";
-import {Swiper, SwiperSlide} from "swiper/react";
-import {A11y, Navigation, Pagination, Scrollbar} from "swiper";
-import CardDepoimentos from "../components/Cards/CardDepoimentos";
-import PlanosConvenios from "../components/PlanosConvenios/PlanosConvenios";
-import FormAtendimento from "../components/FormAtendimento/FormAtendimento";
+import Banner from "/components/Banner/Banner";
+import styles from "/styles/servicos.module.sass";
 
-const Servicos = () => (<>
+import {Button} from "/components/Button/Button";
+import Breadcrumb from "/components/BreadCrumb/Breadcrum";
+import Search from "/components/Search/Search";
+
+import Faq from "/components/Faq/faq";
+import Depoimentos from "/components/Depoimentos/Depoimentos";
+
+import PlanosConvenios from "/components/PlanosConvenios/PlanosConvenios";
+import FormAtendimento from "/components/FormAtendimento/FormAtendimento";
+
+const Especialidades = () => (<>
     <Banner id={3}>
         <div className="container-fluid">
             <div className="row d-flex justify-content-center">
@@ -87,4 +84,4 @@ const Servicos = () => (<>
 </>)
 
 
-export default Servicos;
+export default Especialidades;

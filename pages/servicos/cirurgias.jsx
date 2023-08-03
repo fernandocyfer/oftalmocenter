@@ -1,31 +1,26 @@
-import Banner from "../components/Banner/Banner";
-import styles from "../styles/servicos.module.sass";
-import stylesHome from "../styles/home.module.sass";
-import {Button} from "../components/Button/Button";
-import Breadcrumb from "../components/BreadCrumb/Breadcrum";
-import Search from "../components/Search/Search";
-import Container from "../components/Container/Container";
-import {Accordion} from "react-bootstrap";
-import Faq from "../components/Faq/faq";
-import Depoimentos from "../components/Depoimentos/Depoimentos";
-import {Swiper, SwiperSlide} from "swiper/react";
-import {A11y, Navigation, Pagination, Scrollbar} from "swiper";
-import CardDepoimentos from "../components/Cards/CardDepoimentos";
-import PlanosConvenios from "../components/PlanosConvenios/PlanosConvenios";
-import FormAtendimento from "../components/FormAtendimento/FormAtendimento";
+import Banner from "/components/Banner/Banner";
+import styles from "/styles/servicos.module.sass";
 
-const Servicos = () => (<>
-    <Banner id={3}>
+import {Button} from "/components/Button/Button";
+import Breadcrumb from "/components/BreadCrumb/Breadcrum";
+import Search from "/components/Search/Search";
+
+import Faq from "/components/Faq/faq";
+import Depoimentos from "/components/Depoimentos/Depoimentos";
+
+import PlanosConvenios from "/components/PlanosConvenios/PlanosConvenios";
+import FormAtendimento from "/components/FormAtendimento/FormAtendimento";
+
+const Cirurgias = () => (<>
+    <Banner id={9}>
         <div className="container-fluid">
             <div className="row d-flex justify-content-center">
                 <div className="col-6">
                     <div className={styles.Hero}>
-                        <h2>Especialidades Oftalmológicas</h2>
+                        <h2>Cirurgias Oftalmológicas</h2>
                         <p>
-                            A <b>Americas Oftalmocenter</b> atende diversas especialidades oftalmológicas no Rio de
-                            Janeiro, <br/>
-                            com médicos oftalmologistas especializados no tratamento de Catarata, Glaucoma, <br/>
-                            Ceratocone e outras especialidades que você pode conferir abaixo.
+                            Conheça as cirurgias oftalmológicas oferecidas pela Americas Oftalmocenter e veja como a
+                            nossa equipe de médicos pode ajudar você a cuidar da saúde dos seus olhos:
                         </p>
                         <div className='d-flex'>
                             <Button
@@ -87,4 +82,4 @@ const Servicos = () => (<>
 </>)
 
 
-export default Servicos;
+export default Cirurgias;

@@ -1,31 +1,29 @@
-import Banner from "../components/Banner/Banner";
-import styles from "../styles/servicos.module.sass";
-import stylesHome from "../styles/home.module.sass";
-import {Button} from "../components/Button/Button";
-import Breadcrumb from "../components/BreadCrumb/Breadcrum";
-import Search from "../components/Search/Search";
-import Container from "../components/Container/Container";
-import {Accordion} from "react-bootstrap";
-import Faq from "../components/Faq/faq";
-import Depoimentos from "../components/Depoimentos/Depoimentos";
-import {Swiper, SwiperSlide} from "swiper/react";
-import {A11y, Navigation, Pagination, Scrollbar} from "swiper";
-import CardDepoimentos from "../components/Cards/CardDepoimentos";
-import PlanosConvenios from "../components/PlanosConvenios/PlanosConvenios";
-import FormAtendimento from "../components/FormAtendimento/FormAtendimento";
+import Banner from "/components/Banner/Banner";
+import styles from "/styles/servicos.module.sass";
 
-const Servicos = () => (<>
-    <Banner id={3}>
+import {Button} from "/components/Button/Button";
+import Breadcrumb from "/components/BreadCrumb/Breadcrum";
+import Search from "/components/Search/Search";
+
+import Faq from "/components/Faq/faq";
+import Depoimentos from "/components/Depoimentos/Depoimentos";
+
+import PlanosConvenios from "/components/PlanosConvenios/PlanosConvenios";
+import FormAtendimento from "/components/FormAtendimento/FormAtendimento";
+
+const Exames = () => (<>
+    <Banner id={1}>
         <div className="container-fluid">
             <div className="row d-flex justify-content-center">
                 <div className="col-6">
                     <div className={styles.Hero}>
-                        <h2>Especialidades Oftalmológicas</h2>
+                        <h2>Exames Oftalmológicos</h2>
                         <p>
-                            A <b>Americas Oftalmocenter</b> atende diversas especialidades oftalmológicas no Rio de
-                            Janeiro, <br/>
-                            com médicos oftalmologistas especializados no tratamento de Catarata, Glaucoma, <br/>
-                            Ceratocone e outras especialidades que você pode conferir abaixo.
+                            Na Americas Oftalmocenter você consegue realizar seus exames oftalmológicos no Rio de
+                            Janeiro com a qualidade e atendimento de profissionais capacitados. Se você está procurando
+                            um oftalmologista no Rio de Janeiro para realizar um exame de vista, diagnosticar alguma
+                            doença ocular ou outros exames oftalmológicos, confira a lista abaixo e agende agora sua
+                            consulta.
                         </p>
                         <div className='d-flex'>
                             <Button
@@ -87,4 +85,4 @@ const Servicos = () => (<>
 </>)
 
 
-export default Servicos;
+export default Exames;
